@@ -45,7 +45,7 @@
   margin-bottom: 10px !important;
 }
 
-.background__score__con h4 {
+.background__score__con h5 {
   width: 100%;
   justify-content: center !important;
 }
@@ -77,6 +77,26 @@
   border: hidden;
   border-radius: 5px;
   background-color: #85c6c8;
+}
+
+.background__score__con__khoahoc {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.background__score__con__khoahoc__con3 {
+  padding: 5px 45px;
+  border: hidden;
+  border-radius: 5px;
+  background-color: #ca738a;
+}
+
+.background__score__con__khoahoc__con4 {
+  padding: 5px 45px;
+  border: hidden;
+  border-radius: 5px;
+  background-color: #b790d3;
 }
 
 .background__score__con__button1 {

@@ -37,7 +37,7 @@
         align-items: center;
         margin-bottom: 10px !important;
       }
-      h4 {
+      h5 {
         width: 100%;
         justify-content: center !important;
       }
@@ -64,6 +64,23 @@
           border: hidden;
           border-radius: 5px;
           background-color: rgb(133, 198, 200);
+        }
+      }
+      &__khoahoc {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &__con3 {
+          padding: 5px 45px;
+          border: hidden;
+          border-radius: 5px;
+          background-color: rgb(202, 115, 138);
+        }
+        &__con4 {
+          padding: 5px 45px;
+          border: hidden;
+          border-radius: 5px;
+          background-color: rgb(183, 144, 211);
         }
       }
       &__button1 {

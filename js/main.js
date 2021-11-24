@@ -1,6 +1,8 @@
 var diemtb
-
 var hetruong = 1 
+var khoitnxh = 1
+document.getElementById("button1").style.border = "2px solid #fff"
+document.getElementById("button3").style.border = "2px solid #fff"
 function tinhdiem(){
     var toan = document.getElementById("toan").value
     var van = document.getElementById("van").value
@@ -13,6 +15,9 @@ function tinhdiem(){
     var uuTien = document.getElementById("uutien").value
     if(hetruong > 1){
      anh = "5"
+     if(khoitnxh == 2){
+      sinh ="5"
+     }
     }
     if((toan!="")&& (van!="")&&(anh!="")&&(ly!="")&&(hoa!="")&&(sinh!="")&&(tb!="")){
     toan = Number(toan)
@@ -25,10 +30,16 @@ function tinhdiem(){
     kk = Number(kk)
     uuTien = Number(uuTien)
    var diemth = ((ly + hoa + sinh)/3)
+   var hihi = (ly + hoa)/2
+   
    if (hetruong === 1){
     diemtb = (((((((toan+van+anh+diemth)+kk)/4)*7)+(tb*3))/10)+uuTien)
    }else{
-    diemtb = (((((((toan+van+diemth)/3)+(kk/4))*7)+(tb*3))/10)+uuTien)
+    if(khoitnxh == 2){
+        diemtb = (((((((toan+van+hihi)/3)+(kk/4))*7)+(tb*3))/10)+uuTien)
+    }else{
+        diemtb = (((((((toan+van+diemth)/3)+(kk/4))*7)+(tb*3))/10)+uuTien)
+    }
    }
    var diemTbTag = document.getElementById("diem")
    diemTbTag.style.display = "block"
@@ -79,9 +90,18 @@ function reset(){
 }
 function gdtx(){
  hetruong = 2
- document.getElementById("span1").textContent = "Sử:"
- document.getElementById("span2").textContent = "Địa:"
- document.getElementById("span3").textContent = "Gdcd:"
+    document.getElementById("button2").style.border = "2px solid #fff"
+    document.getElementById("button1").style.border = "hidden"
+ if(khoitnxh == 1 ){
+    document.getElementById("ss").style.display = "flex"
+    document.getElementById("span1").textContent = "Lý:"
+    document.getElementById("span2").textContent = "Hoá:" 
+    document.getElementById("span3").textContent = "Sinh:"
+ }else{
+    document.getElementById("ss").style.display = "none"
+    document.getElementById("span1").textContent = "Sử:"
+    document.getElementById("span2").textContent = "Địa:"
+ }
  document.getElementById("NN").style.display = "none"
  document.getElementById("toan").value = ""
  document.getElementById("van").value = ""
@@ -96,9 +116,19 @@ function gdtx(){
 }
 function thpt(){
     hetruong = 1
-    document.getElementById("span1").textContent = "Lý:"
-    document.getElementById("span2").textContent = "Hoá:"
-    document.getElementById("span3").textContent = "Sinh:"
+        document.getElementById("button1").style.border = "2px solid #fff"
+        document.getElementById("button2").style.border = "hidden"
+    if(khoitnxh == 1 ){
+        document.getElementById("ss").style.display = "flex"
+        document.getElementById("span1").textContent = "Lý:"
+        document.getElementById("span2").textContent = "Hoá:" 
+        document.getElementById("span3").textContent = "Sinh:"
+     }else{
+        document.getElementById("ss").style.display = "flex"
+        document.getElementById("span1").textContent = "Sử:"
+        document.getElementById("span2").textContent = "Địa:"
+        document.getElementById("span3").textContent = "gdcd:"
+     }
     document.getElementById("NN").style.display = "flex"
     document.getElementById("toan").value = ""
     document.getElementById("van").value = ""
@@ -111,3 +141,27 @@ function thpt(){
     document.getElementById("uutien").value = ""
     document.getElementById("diem").style.display = "none"
    }
+   function tn(){
+       khoitnxh = 1
+       document.getElementById("button3").style.border = "2px solid #fff"
+       document.getElementById("button4").style.border = "hidden"
+       document.getElementById("ss").style.display = "flex"
+        document.getElementById("span1").textContent = "Lý:"
+        document.getElementById("span2").textContent = "Hoá:"
+       document.getElementById("span3").textContent = "Sinh:"
+   }
+   function xh(){
+    khoitnxh = 2
+        document.getElementById("button4").style.border = "2px solid #fff"
+        document.getElementById("button3").style.border = "hidden"
+    if(hetruong == 1){
+        document.getElementById("ss").style.display = "flex"
+        document.getElementById("span1").textContent = "Sử:"
+        document.getElementById("span2").textContent = "Địa:" 
+        document.getElementById("span3").textContent = "gdcd:"
+     }else{
+        document.getElementById("ss").style.display = "none"
+        document.getElementById("span1").textContent = "Sử:"
+        document.getElementById("span2").textContent = "Địa:"
+     }
+}
