@@ -103,16 +103,7 @@ function gdtx(){
     document.getElementById("span2").textContent = "Địa:"
  }
  document.getElementById("NN").style.display = "none"
- document.getElementById("toan").value = ""
- document.getElementById("van").value = ""
- document.getElementById("anh").value = ""
- document.getElementById("ly").value = ""
- document.getElementById("hoa").value = ""
- document.getElementById("sinh").value = ""
- document.getElementById("tb").value = ""
- document.getElementById("kk").value = ""
- document.getElementById("uutien").value = ""
- document.getElementById("diem").style.display = "none"
+ reset()
 }
 function thpt(){
     hetruong = 1
@@ -130,16 +121,7 @@ function thpt(){
         document.getElementById("span3").textContent = "gdcd:"
      }
     document.getElementById("NN").style.display = "flex"
-    document.getElementById("toan").value = ""
-    document.getElementById("van").value = ""
-    document.getElementById("anh").value = ""
-    document.getElementById("ly").value = ""
-    document.getElementById("hoa").value = ""
-    document.getElementById("sinh").value = ""
-    document.getElementById("tb").value = ""
-    document.getElementById("kk").value = ""
-    document.getElementById("uutien").value = ""
-    document.getElementById("diem").style.display = "none"
+    reset()
    }
    function tn(){
        khoitnxh = 1
@@ -149,16 +131,7 @@ function thpt(){
         document.getElementById("span1").textContent = "Lý:"
         document.getElementById("span2").textContent = "Hoá:"
        document.getElementById("span3").textContent = "Sinh:"
-       document.getElementById("toan").value = ""
-       document.getElementById("van").value = ""
-       document.getElementById("anh").value = ""
-       document.getElementById("ly").value = ""
-       document.getElementById("hoa").value = ""
-       document.getElementById("sinh").value = ""
-       document.getElementById("tb").value = ""
-       document.getElementById("kk").value = ""
-       document.getElementById("uutien").value = ""
-       document.getElementById("diem").style.display = "none"
+       reset()
    }
    function xh(){
     khoitnxh = 2
@@ -174,14 +147,5 @@ function thpt(){
         document.getElementById("span1").textContent = "Sử:"
         document.getElementById("span2").textContent = "Địa:"
      }
-     document.getElementById("toan").value = ""
-     document.getElementById("van").value = ""
-     document.getElementById("anh").value = ""
-     document.getElementById("ly").value = ""
-     document.getElementById("hoa").value = ""
-     document.getElementById("sinh").value = ""
-     document.getElementById("tb").value = ""
-     document.getElementById("kk").value = ""
-     document.getElementById("uutien").value = ""
-     document.getElementById("diem").style.display = "none"
+     reset()
 }
