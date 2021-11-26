@@ -53,28 +53,10 @@ function tinhdiem(){
     var thieudiem = (5-diemtb)
     diemTbTag.textContent = "rớt TN thiếu: "+thieudiem.toFixed(2)
    }
+    }else{
+        alert("nhập thiếu điểm kìa")
     }
-    if(toan===""){
-        alert("chưa nhập điểm toán")
-    }
-    if(van===""){
-        alert("chưa nhập điểm văn")
-    }
-    if(anh===""){
-        alert("chưa nhập điểm anh")
-    }
-    if(ly===""){
-        alert("chưa nhập điểm lý")
-    }
-    if(hoa===""){
-        alert("chưa nhập điểm hoá")
-    }
-    if(sinh===""){
-        alert("chưa nhập điểm sinh")
-    }
-    if(tb===""){
-        alert("chưa nhập điểm trung bình")
-    }
+   
 }
 function reset(){ 
     document.getElementById("toan").value = ""
